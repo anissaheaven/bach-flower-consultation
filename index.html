@@ -782,6 +782,7 @@ figcaption,#story .story-image figcaption,#anissa .portrait-image figcaption,.fl
 @media(prefers-reduced-motion:reduce){#flowers .emotion-read{transition:none}}
 #flowers .flowers-restored-intro{padding-block:var(--section);align-items:center}
 #flowers .flower-copy{min-width:0}
+#flowers .flower-title-group{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:16px;row-gap:4px}
 #flowers .flower-map{display:grid;align-self:start;margin-top:calc(var(--section) + var(--flower-photo-top))}
 #flowers{--flower-photo-top:calc(12.5px + 1.45 * var(--type-section))}
 #flowers .flower-product{margin:0 0 12px}
@@ -790,12 +791,12 @@ figcaption,#story .story-image figcaption,#anissa .portrait-image figcaption,.fl
 @media(min-width:768px){#flowers .flower-copy{position:relative;padding-left:56px}
 #flowers .flower-copy .label{font-size:14px}
 #flowers .flower-copy h2{margin:0}
-#flowers .flower-copy .eyebrow{position:absolute;top:72px;right:0;margin:0;font-size:12px}
+#flowers .flower-copy .eyebrow{position:static;margin:0;font-size:12px}
 #flowers .flower-copy>p.flower-subtitle{margin:0 0 24px;font-size:28px}
 #flowers .flower-copy>p:not(.eyebrow):not(.flower-subtitle){font-size:18px;margin-top:24px}}
 @media(max-width:767px){#flowers .flowers-restored-intro{padding-block:var(--section);gap:32px}
 #flowers .flower-map{margin-top:0}
-#flowers .flower-copy .eyebrow{margin-top:16px}
+#flowers .flower-copy .eyebrow{margin:0}
 #flowers .flower-copy>p.flower-subtitle{margin-left:0}
 #flowers .flower-product figcaption{text-align:center}}
 #plans .charity-entry{--charity-gap:24px;display:flex;align-items:center;gap:var(--charity-gap);max-width:960px;margin:32px auto 0;padding:24px 32px;background:var(--sage);border-radius:16px;color:var(--ink)}
@@ -854,6 +855,8 @@ figcaption,#story .story-image figcaption,#anissa .portrait-image figcaption,.fl
 #anissa .anissa-layout{align-items:start}
 #flowers .flower-copy{padding-left:0}
 #flowers .flower-copy>p:not(.eyebrow):not(.flower-subtitle){font-size:var(--type-body)}
+@media(min-width:1024px){#flowers .flowers-restored-intro{padding-block:clamp(48px,5vw,64px);align-items:start}
+#flowers .flower-map{margin-top:calc(53px + 1.45 * var(--type-section))}}
 #process .process-heading .process-intro{width:min(100%,640px);margin:0;font-size:var(--type-body)}
 #process .steps h3{font-size:var(--type-subtitle);line-height:1.6}
 #process .steps p{width:100%}
@@ -873,7 +876,7 @@ figcaption{transform:none}
 @media(min-width:768px) and (max-width:1023px){#story .story-heading h2{font-size:var(--type-section)}
 #flowers .flowers-restored-intro{grid-template-columns:1fr;gap:32px}
 #flowers .flower-map{margin-top:0;width:min(100%,620px);justify-self:center}
-#flowers .flower-copy .eyebrow{position:static;margin-top:16px}
+#flowers .flower-copy .eyebrow{position:static;margin:0;font-size:11px}
 #plans{--plan-padding:24px}
 #plans .card-includes>div{grid-template-columns:1fr;gap:4px}
 #plans .card-includes dd{text-align:left}}
@@ -1027,8 +1030,7 @@ img{max-width:100%}
 </div></div><ul class="anissa-certificates" aria-label="專業資格"><li class="anissa-certificate"><span class="anissa-certificate-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 9h27l8 8v30H15z"></path><path d="M42 9v8h8M23 22h19M23 29h15"></path><circle cx="35" cy="40" r="6"></circle><path d="m31 45-2 10 6-3 6 3-2-10"></path></svg></span><div class="anissa-certificate-copy"><span class="anissa-certificate-label">專業資格</span><strong>BFRP</strong><span>英國巴哈中心註冊花精應用師</span><span class="anissa-certificate-english" lang="en">The Bach Centre Registered Practitioner</span></div></li><li class="anissa-certificate"><span class="anissa-certificate-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 9h27l8 8v30H15z"></path><path d="M42 9v8h8M23 22h19M23 29h15"></path><circle cx="35" cy="40" r="6"></circle><path d="m31 45-2 10 6-3 6 3-2-10"></path></svg></span><div class="anissa-certificate-copy"><span class="anissa-certificate-label">專業資格</span><strong>NAHA Level 1</strong><span>美國整體芳療協會 初階芳療師</span><span class="anissa-certificate-english" lang="en">National Association for Holistic Aromatherapists</span></div></li><li class="anissa-certificate"><span class="anissa-certificate-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 9h27l8 8v30H15z"></path><path d="M42 9v8h8M23 22h19M23 29h15"></path><circle cx="35" cy="40" r="6"></circle><path d="m31 45-2 10 6-3 6 3-2-10"></path></svg></span><div class="anissa-certificate-copy"><span class="anissa-certificate-label">專業資格</span><strong>FFAMD</strong><span>FFAMD 法國芳香療法與自然醫學聯合會 初階醫芳師</span><span class="anissa-certificate-english" lang="fr">Fédération Française d’Aromathérapie et Médecines Douces</span></div></li><li class="anissa-certificate"><span class="anissa-certificate-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 9h27l8 8v30H15z"></path><path d="M42 9v8h8M23 22h19M23 29h15"></path><circle cx="35" cy="40" r="6"></circle><path d="m31 45-2 10 6-3 6 3-2-10"></path></svg></span><div class="anissa-certificate-copy"><span class="anissa-certificate-label">專業資格</span><strong>KDCA</strong><span>韓國設計工藝協會 調香師</span><span class="anissa-certificate-english" lang="en">Korea Design Craft Association</span></div></li></ul></div></section>
 
 <section class="section flowers" id="flowers"><div class="wrap two-col consult-intro flowers-restored-intro"><div class="flower-copy"><span class="label">04　／　認識花精</span>
-<h2>巴哈花精</h2>
-<p class="eyebrow">BACH FLOWER REMEDIES</p>
+<div class="flower-title-group"><h2>巴哈花精</h2><p class="eyebrow">BACH FLOWER REMEDIES</p></div>
 <p class="flower-subtitle">來自大自然的溫柔支持</p>
 <p>巴哈花精（Bach Flower Remedies）是英國醫師 Edward Bach 所發展的 38 種花精系統，每種花精能支持所對應的不同情緒失衡狀態。</p>
 <p>巴哈醫生相信，花精幫助我們找回平衡，但更重要的是每個人都擁有自我療癒的力量，而真正的改變，往往從願意看見自己、理解自己開始。
