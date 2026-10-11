@@ -20,8 +20,8 @@
 <meta name="twitter:image" content="https://anissaheaven.github.io/bach-flower-consultation/assets/share-cover.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="preload" as="image" href="assets/optimized/hero-desktop.jpg" media="(min-width:768px)" fetchpriority="high">
-<link rel="preload" as="image" href="assets/optimized/hero-mobile.jpg" media="(max-width:767px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="assets/optimized/hero-desktop.webp" media="(min-width:768px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="assets/optimized/hero-mobile.webp" media="(max-width:767px)" fetchpriority="high">
 <style>/* OD-LAYOUT-PRIMITIVES v1 — structural layer retained first. */
 @layer od-layout{:where(.od-stack,.od-row,.od-row-top,.od-cluster,.od-grid,.od-field,.od-stat,.od-cell,.od-tile) > :where(*){min-width: 0;}
 .od-stack{display: flex; flex-direction: column; gap: var(--od-gap, 8px);}
@@ -266,7 +266,7 @@ summary{font-size:16px;padding-block:22px}
 .hero-copy{max-width:none}}
 :root{--hero-wash:rgba(248,245,236,.82);--hero-wash-soft:rgba(248,245,236,.16);--hero-height:720px;--hero-round:28px}
 .site-header{background:var(--paper);border-bottom-color:transparent}
-.hero{background-color:var(--paper);background-image:linear-gradient(90deg,var(--hero-wash) 0%,var(--hero-wash-soft) 48%,transparent 66%),url('assets/optimized/hero-desktop.jpg');background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero{background-color:var(--paper);background-image:linear-gradient(90deg,var(--hero-wash) 0%,var(--hero-wash-soft) 48%,transparent 66%),var(--hero-photo,url('assets/optimized/hero-desktop.jpg'));background-size:cover;background-position:center;background-repeat:no-repeat}
 .hero .hero-layout{display:flex;align-items:center;min-height:var(--hero-height);padding-block:72px;gap:0}
 .hero .hero-copy{width:48%;max-width:520px;margin-left:4%;justify-self:auto}
 .hero .hero-copy .eyebrow{font-size:11px;letter-spacing:.16em;margin-bottom:24px}
@@ -284,7 +284,7 @@ summary{font-size:16px;padding-block:22px}
 .hero .hero-actions{gap:16px}
 .hero .hero-copy>p{font-size:16px}
 .hero{background-position:60% center}}
-@media(max-width:767px){.hero{background-image:linear-gradient(90deg,var(--hero-wash-soft),transparent),url('assets/optimized/hero-mobile.jpg');background-position:center bottom;background-size:cover}
+@media(max-width:767px){.hero{background-image:linear-gradient(90deg,var(--hero-wash-soft),transparent),var(--hero-photo,url('assets/optimized/hero-mobile.jpg'));background-position:center bottom;background-size:cover}
 .hero .hero-layout{display:block;width:calc(100% - 48px);min-height:800px;padding:48px 0 240px}
 .hero .hero-copy{width:100%;max-width:440px;margin:0}
 .hero .hero-copy .eyebrow{font-size:10px;letter-spacing:.1em;margin-bottom:20px}
@@ -483,7 +483,7 @@ summary{font-size:16px;padding-block:22px}
 #plans .card-price{margin-bottom:24px}
 #plans .card-includes>div{gap:8px}
 #plans .plan-card h3{font-size:24px}}
-#plans{position:relative;isolation:isolate;--plan-wash:rgba(248,245,236,.84);--plan-surface:rgba(255,252,244,.96);background:linear-gradient(var(--plan-wash),var(--plan-wash)),url('assets/optimized/plans.jpg') center center/cover no-repeat}
+#plans{position:relative;isolation:isolate;--plan-wash:rgba(248,245,236,.84);--plan-surface:rgba(255,252,244,.96);background:linear-gradient(var(--plan-wash),var(--plan-wash)),var(--plan-photo,url('assets/optimized/plans.jpg')) center center/cover no-repeat}
 #plans>.wrap{position:relative;z-index:1}
 #plans .plans-leaf{position:absolute;z-index:0;display:block;width:clamp(112px,16vw,224px);height:auto;color:var(--accent);opacity:.48;pointer-events:none}
 #plans .plans-leaf-top{top:32px;right:24px;transform:rotate(-24deg)}
@@ -524,7 +524,7 @@ summary{font-size:16px;padding-block:22px}
 #faq .faq-list summary{padding:20px 48px 20px 20px}
 #faq .faq-list summary:after{right:16px;top:20px}
 #faq .faq-list details p{padding:16px 20px 24px}}
-#appointment{--closing-shade:rgba(25,39,23,.84);--closing-clear:rgba(25,39,23,.08);--closing-rose:#EBD2C7;--closing-rose-hover:#F4E2DA;background:linear-gradient(90deg,var(--closing-shade) 0%,rgba(25,39,23,.72) 48%,var(--closing-clear) 100%),url('assets/optimized/closing.jpg') center/cover no-repeat;color:var(--white);text-align:left;padding:88px 0;}
+#appointment{--closing-shade:rgba(25,39,23,.84);--closing-clear:rgba(25,39,23,.08);--closing-rose:#EBD2C7;--closing-rose-hover:#F4E2DA;background:linear-gradient(90deg,var(--closing-shade) 0%,rgba(25,39,23,.72) 48%,var(--closing-clear) 100%),var(--closing-photo,url('assets/optimized/closing.jpg')) center/cover no-repeat;color:var(--white);text-align:left;padding:88px 0;}
 #appointment .closing-copy{max-width:640px;--od-gap:24px}
 #appointment .eyebrow{color:var(--white);margin:0}
 #appointment h2{font-size:clamp(30px,3.5vw,44px);line-height:1.5;letter-spacing:.04em}
@@ -538,7 +538,7 @@ summary{font-size:16px;padding-block:22px}
 @media(hover:hover){#appointment .btn:hover{background:var(--closing-rose-hover);border-color:var(--closing-rose-hover)}}
 @media(min-width:768px) and (max-width:1023px){#appointment .closing-copy{max-width:560px}
 #appointment{background-position:60% center}}
-@media(max-width:767px){#appointment{padding:56px 0 192px;background-image:linear-gradient(180deg,rgba(25,39,23,.92) 0%,rgba(25,39,23,.84) 65%,rgba(25,39,23,.15) 100%),url('assets/optimized/closing.jpg');background-position:72% bottom}
+@media(max-width:767px){#appointment{padding:56px 0 192px;background-image:linear-gradient(180deg,rgba(25,39,23,.92) 0%,rgba(25,39,23,.84) 65%,rgba(25,39,23,.15) 100%),var(--closing-photo,url('assets/optimized/closing.jpg'));background-position:72% bottom}
 #appointment .closing-copy{--od-gap:24px}
 #appointment .closing-prompts li{font-size:16px;gap:12px}
 #appointment .btn{width:100%}
@@ -946,9 +946,18 @@ img{max-width:100%}
  .site-header .nav{max-height:calc(100dvh - var(--header-measured,var(--header-full)));overscroll-behavior:contain}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
-@media(max-width:767px){#plans{background-image:linear-gradient(var(--plan-wash),var(--plan-wash)),url('assets/optimized/plans-768.jpg')}#appointment{background-image:linear-gradient(180deg,rgba(25,39,23,.92) 0%,rgba(25,39,23,.84) 65%,rgba(25,39,23,.15) 100%),url('assets/optimized/closing-768.jpg')}}
+@media(max-width:767px){#plans{background-image:linear-gradient(var(--plan-wash),var(--plan-wash)),var(--plan-photo,url('assets/optimized/plans-768.jpg'))}#appointment{background-image:linear-gradient(180deg,rgba(25,39,23,.92) 0%,rgba(25,39,23,.84) 65%,rgba(25,39,23,.15) 100%),var(--closing-photo,url('assets/optimized/closing-768.jpg'))}}
+
+/* WebP images preserve the existing crops and gradients; JPG remains the fallback. */
+#story .story-photo-blend>picture,#anissa .portrait-image>picture,#flowers .flower-product>picture{display:block;width:100%}
+@supports (background-image:image-set(url("assets/optimized/hero-desktop.webp") type("image/webp"))){
+.hero{--hero-photo:image-set(url('assets/optimized/hero-desktop.webp') type('image/webp'),url('assets/optimized/hero-desktop.jpg') type('image/jpeg'))}
+#plans{--plan-photo:image-set(url('assets/optimized/plans.webp') type('image/webp'),url('assets/optimized/plans.jpg') type('image/jpeg'))}
+#appointment{--closing-photo:image-set(url('assets/optimized/closing.webp') type('image/webp'),url('assets/optimized/closing.jpg') type('image/jpeg'))}
+@media(max-width:767px){.hero{--hero-photo:image-set(url('assets/optimized/hero-mobile.webp') type('image/webp'),url('assets/optimized/hero-mobile.jpg') type('image/jpeg'))}#plans{--plan-photo:image-set(url('assets/optimized/plans-768.webp') type('image/webp'),url('assets/optimized/plans-768.jpg') type('image/jpeg'))}#appointment{--closing-photo:image-set(url('assets/optimized/closing-768.webp') type('image/webp'),url('assets/optimized/closing-768.jpg') type('image/jpeg'))}}
+}
 </style></head><body><svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><symbol id="sprig" viewBox="0 0 40 56"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 53C20 38 21 23 28 4M23 22C8 24 7 12 8 10c10 0 17 6 15 12ZM21 36C7 38 4 26 5 24c12 0 17 6 16 12ZM25 16C26 4 34 3 37 3c0 9-5 14-12 13ZM21 31C26 19 35 22 36 23c-2 9-9 12-15 8Z"></path></g></symbol></defs></svg><a class="skip" href="#main">跳至主要內容</a>
-<header class="site-header"><div class="wrap header-inner"><a class="brand" href="https://www.facebook.com/anissanature" target="_blank" rel="noopener noreferrer" aria-label="Anissa Nature 采安療心室 Facebook 粉絲專頁"><img class="brand-logo" src="assets/brand-logo.png" width="500" height="500" alt=""><span class="brand-wordmark od-field"><span class="brand-name">Anissa · Nature</span><span class="brand-sub">采安療心室</span></span></a><button class="menu" aria-expanded="false" aria-controls="navigation"><span>選單</span><svg class="menu-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"></path></svg></button><nav class="nav" id="navigation" aria-label="主要導覽"><a href="#consult">花精諮詢</a><a href="#story">個案故事</a><a href="#anissa">認識采安</a><a href="#flowers">認識花精</a><a href="#plans">方案與費用</a><a href="#faq">常見問題</a><a class="nav-cta" href="https://forms.gle/Ygh66V3NNEiaYqCK8" target="_blank" rel="noopener noreferrer">預約體驗</a></nav></div></header>
+<header class="site-header"><div class="wrap header-inner"><a class="brand" href="https://www.facebook.com/anissanature" target="_blank" rel="noopener noreferrer" aria-label="Anissa Nature 采安療心室 Facebook 粉絲專頁"><img class="brand-logo" src="assets/brand-logo-224.png" width="224" height="224" alt=""><span class="brand-wordmark od-field"><span class="brand-name">Anissa · Nature</span><span class="brand-sub">采安療心室</span></span></a><button class="menu" aria-expanded="false" aria-controls="navigation"><span>選單</span><svg class="menu-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"></path></svg></button><nav class="nav" id="navigation" aria-label="主要導覽"><a href="#consult">花精諮詢</a><a href="#story">個案故事</a><a href="#anissa">認識采安</a><a href="#flowers">認識花精</a><a href="#plans">方案與費用</a><a href="#faq">常見問題</a><a class="nav-cta" href="https://forms.gle/Ygh66V3NNEiaYqCK8" target="_blank" rel="noopener noreferrer">預約體驗</a></nav></div></header>
 <div class="header-space" aria-hidden="true"></div><main id="main"><section class="hero" id="home"><div class="wrap hero-layout"><div class="hero-copy"><span class="eyebrow">ANISSA · NATURE　／　花精與情緒陪伴</span>
 <h1><span>慢下來，</span><br>
 <span>聽見自己</span></h1>
@@ -996,10 +1005,10 @@ img{max-width:100%}
 <p>羽晴跟我說：「就好像冰箱超市買了一大堆菜回來，要做好吃的，然後結果放到冰箱全都爛掉。」</p>
 <p>羽晴是一個對工作很有想法，也很希望好好陪伴孩子長大的媽媽，她總是很努力把每一件事情做好、照顧好身旁的每個人。</p>
 <p>只是當生活裡同時太多角色、太多期待，最後只剩下一種「想到就好累」動彈不得的狀態。</p>
-<a class="text-link story-open" href="#full-story">閱讀完整故事</a></article><figure class="story-image"><div class="story-photo-blend"><img class="od-media" src="assets/optimized/story.jpg" srcset="assets/optimized/story-768.jpg 768w, assets/optimized/story.jpg 1536w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 620px, 560px" width="1536" height="1024" loading="lazy" decoding="async" alt="明亮柔和的窗光中，一位女子坐在綠意旁的椅子上低頭沉思"><img class="story-leaves botanical-drawing" src="assets/botanical-leaves.svg" width="240" height="400" alt="" aria-hidden="true"></div>
+<a class="text-link story-open" href="#full-story">閱讀完整故事</a></article><figure class="story-image"><div class="story-photo-blend"><picture><source type="image/webp" srcset="assets/optimized/story-768.webp 768w, assets/optimized/story-1200.webp 1200w, assets/optimized/story.webp 1536w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 620px, 560px"><img class="od-media" src="assets/optimized/story.jpg" srcset="assets/optimized/story-768.jpg 768w, assets/optimized/story.jpg 1536w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 620px, 560px" width="1536" height="1024" loading="eager" fetchpriority="low" decoding="async" alt="明亮柔和的窗光中，一位女子坐在綠意旁的椅子上低頭沉思"></picture><img class="story-leaves botanical-drawing" src="assets/botanical-leaves.svg" width="240" height="400" alt="" aria-hidden="true"></div>
 <figcaption>窗光裡，留一點時間給自己。</figcaption>
 </figure></div></section>
-<section class="section" id="anissa"><div class="wrap"><div class="two-col anissa-layout"><figure class="image-slot portrait-image"><img class="anissa-portrait" src="assets/optimized/anissa.jpg" srcset="assets/optimized/anissa-768.jpg 768w, assets/optimized/anissa.jpg 1449w" sizes="(max-width: 767px) calc(100vw - 40px), 480px" width="1449" height="1086" loading="lazy" decoding="async" alt="Anissa 在繡球花與綠意環繞的花園中微笑">
+<section class="section" id="anissa"><div class="wrap"><div class="two-col anissa-layout"><figure class="image-slot portrait-image"><picture><source type="image/webp" srcset="assets/optimized/anissa-768.webp 768w, assets/optimized/anissa-1024.webp 1024w, assets/optimized/anissa.webp 1449w" sizes="(max-width: 767px) calc(100vw - 40px), 480px"><img class="anissa-portrait" src="assets/optimized/anissa.jpg" srcset="assets/optimized/anissa-768.jpg 768w, assets/optimized/anissa.jpg 1449w" sizes="(max-width: 767px) calc(100vw - 40px), 480px" width="1449" height="1086" loading="lazy" decoding="async" alt="Anissa 在繡球花與綠意環繞的花園中微笑"></picture>
 <figcaption>如果你也想停下來，整理一下自己的心，歡迎來找我聊聊。</figcaption>
 </figure><div class="copy"><span class="label">03　／　陪你坐下來的人</span>
 <h2>認識采安</h2>
@@ -1024,7 +1033,7 @@ img{max-width:100%}
 <p>巴哈醫生相信，花精幫助我們找回平衡，但更重要的是每個人都擁有自我療癒的力量，而真正的改變，往往從願意看見自己、理解自己開始。
 </p>
 <p class="fine">花精不是替你做決定，也不是替你解決人生，而是在情緒失去平衡時，提供一份溫和的支持，陪你完成你想要的蛻變。</p>
-</div><div class="flower-map"><figure class="flower-product"><img class="od-media" src="assets/optimized/flowers.jpg" srcset="assets/optimized/flowers-768.jpg 768w, assets/optimized/flowers.jpg 1536w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 620px, 560px" width="1536" height="1024" loading="lazy" decoding="async" alt="柔和日光下，琥珀色花精滴管瓶置於白色小花與綠葉之間">
+</div><div class="flower-map"><figure class="flower-product"><picture><source type="image/webp" srcset="assets/optimized/flowers-768.webp 768w, assets/optimized/flowers-1200.webp 1200w, assets/optimized/flowers.webp 1536w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 620px, 560px"><img class="od-media" src="assets/optimized/flowers.jpg" srcset="assets/optimized/flowers-768.jpg 768w, assets/optimized/flowers.jpg 1536w" sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1023px) 620px, 560px" width="1536" height="1024" loading="lazy" decoding="async" alt="柔和日光下，琥珀色花精滴管瓶置於白色小花與綠葉之間"></picture>
 <figcaption>花精是這段過程中的支持選項；理解與照顧自己仍是核心。</figcaption>
 </figure></div></div>
 <div class="flowers-categories-surface"><div class="wrap emotion-overview" aria-labelledby="emotion-overview-title">
@@ -1278,7 +1287,7 @@ img{max-width:100%}
 <p class="fine">＊為保護個案隱私，本文已使用化名並調整部分可辨識資訊；內容經個案同意後分享。</p>
 </article>
 <a class="text-link reader-back reader-bottom" href="#story">回到剛才閱讀的地方</a>
-</main><footer class="footer"><div class="wrap"><div class="footer-top"><div class="footer-contact"><a class="brand" href="#home"><img class="brand-logo" src="assets/brand-logo.png" width="500" height="500" alt=""><span class="brand-wordmark od-field"><span class="brand-name">Anissa · Nature</span><span class="brand-sub">采安療心室</span></span></a><p class="fine footer-identity">BFRP 巴哈花精註冊諮詢師<br>陪你理解情緒，也陪你靠近自己。</p><div class="contacts" aria-label="聯絡入口"><a href="https://www.facebook.com/anissanature" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://lin.ee/wT2YPl4" target="_blank" rel="noopener noreferrer" aria-label="LINE 官方帳號">LINE官方帳號</a></div>
+</main><footer class="footer"><div class="wrap"><div class="footer-top"><div class="footer-contact"><a class="brand" href="#home"><img class="brand-logo" src="assets/brand-logo-224.png" width="224" height="224" alt=""><span class="brand-wordmark od-field"><span class="brand-name">Anissa · Nature</span><span class="brand-sub">采安療心室</span></span></a><p class="fine footer-identity">BFRP 巴哈花精註冊諮詢師<br>陪你理解情緒，也陪你靠近自己。</p><div class="contacts" aria-label="聯絡入口"><a href="https://www.facebook.com/anissanature" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://lin.ee/wT2YPl4" target="_blank" rel="noopener noreferrer" aria-label="LINE 官方帳號">LINE官方帳號</a></div>
 
 </div></div><div class="footer-bottom"><span>© Anissa · Nature 采安療心室</span>
 <p>花精諮詢不提供診斷或治療，也不能替代醫療及心理專業協助。</p>
