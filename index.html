@@ -574,6 +574,7 @@ figcaption,#story .story-image figcaption,#anissa .portrait-image figcaption,.fl
 #anissa .anissa-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);grid-template-areas:"copy portrait";align-items:center;gap:64px}
 #anissa .copy{grid-area:copy;min-width:0}
 #anissa .portrait-image{grid-area:portrait;min-width:0;position:relative}
+@media(min-width:1024px){#anissa .portrait-image{align-self:start;margin-block-start:calc(var(--type-eyebrow)*1.5 + 16px + var(--type-section)*1.45 + 8px)}}
 #anissa .portrait-image:after{content:"";position:absolute;left:-36px;bottom:24px;width:88px;height:146px;background:url('assets/botanical-leaves.svg') center/contain no-repeat;pointer-events:none;opacity:.7}
 #anissa .portrait-image figcaption{position:relative;z-index:1}
 #anissa .anissa-certificates{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:48px 0 0;padding:0}
