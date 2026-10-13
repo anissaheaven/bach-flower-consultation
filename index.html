@@ -284,16 +284,16 @@ summary{font-size:16px;padding-block:22px}
 .hero .hero-actions{gap:16px}
 .hero .hero-copy>p{font-size:16px}
 .hero{background-position:60% center}}
-@media(max-width:767px){.hero{background-image:linear-gradient(90deg,var(--hero-wash-soft),transparent),var(--hero-photo,url('assets/optimized/hero-mobile.jpg'));background-position:center bottom;background-size:cover}
-.hero .hero-layout{display:block;width:calc(100% - 48px);min-height:800px;padding:48px 0 240px}
+@media(max-width:767px){.hero{background-image:linear-gradient(90deg,var(--hero-wash-soft),transparent),var(--hero-photo,url('assets/optimized/hero-mobile.jpg'));background-position:58% bottom;background-size:cover}
+.hero .hero-layout{display:block;width:calc(100% - 48px);min-height:0;padding:clamp(28px,7vw,36px) 0 clamp(148px,38vw,172px)}
 .hero .hero-copy{width:100%;max-width:440px;margin:0}
-.hero .hero-copy .eyebrow{font-size:10px;letter-spacing:.1em;margin-bottom:20px}
-.hero h1{font-size:clamp(40px,10vw,56px)}
+.hero .hero-copy .eyebrow{font-size:10px;letter-spacing:.1em;margin-bottom:12px}
+.hero h1{font-size:clamp(40px,10vw,56px);line-height:1.38}
 .hero .hero-copy>p{font-size:16px;line-height:1.85;max-width:21em}
-.hero .hero-actions{display:flex;align-items:flex-start;flex-direction:column;gap:12px;margin-top:24px}
+.hero .hero-actions{display:flex;align-items:flex-start;flex-direction:column;gap:12px;margin-top:20px}
 .hero .hero-actions .btn{width:auto;padding-inline:28px}
 .hero .hero-actions .text-link{font-size:14px}
-.hero .hero-note{max-width:19em;margin-top:20px!important}
+.hero .hero-note{display:none}
 .hero .hero-foot{padding:16px 24px;font-size:11px}}
 .site-header .brand>.od-field{display:flex;flex-direction:row;align-items:baseline;gap:12px}
 .site-header .brand-sub{margin-top:0;white-space:nowrap}
@@ -667,8 +667,8 @@ figcaption,#story .story-image figcaption,#anissa .portrait-image figcaption,.fl
 .footer-contact .contacts{gap:8px 20px}}
 #home .hero-copy .hero-subtitle{margin-top:12px;font-family:var(--heading-font);font-size:clamp(20px,2vw,26px);font-weight:500;line-height:1.5;letter-spacing:.06em;color:var(--ink)}
 #home .hero-copy .hero-subtitle+p{margin-top:24px}
-@media(max-width:767px){#home .hero-copy .hero-subtitle{font-size:20px;margin-top:12px}
-#home .hero-copy .hero-subtitle+p{margin-top:20px}}
+@media(max-width:767px){#home .hero-copy .hero-subtitle{font-size:20px;margin-top:8px}
+#home .hero-copy .hero-subtitle+p{margin-top:16px}}
 #home{position:relative}
 #home .hero-script{position:absolute;z-index:1;top:61%;left:52%;width:min(42%,490px);margin:0;color:#fff;font-family:"Snell Roundhand","Lucida Handwriting","Apple Chancery",cursive;font-size:clamp(34px,3.6vw,52px);font-weight:400;line-height:1.1;letter-spacing:.025em;text-align:left;text-shadow:0 1px 4px rgba(43,43,32,.48);pointer-events:auto;user-select:text}
 #home .hero-script span{display:block;white-space:nowrap}
@@ -1024,10 +1024,10 @@ img{max-width:100%}
 <h2>認識采安</h2>
 <p class="anissa-subtitle">我想陪你一起看見自己</p>
 <p class="credential">BFRP 英國巴哈花精註冊諮詢師</p>
-<p>老實說，雖然我讀心理學，卻從小就不太喜歡去輔導室。<br>
-因為別人的意見，有時反而會讓我心裡更拉扯。</p>
-<p>學習社會心理學後，我開始練習分辨：<br>
-什麼是外在的眼光，什麼是自己的聲音。</p>
+<p>我一直是一個很有自己想法，卻也很容易聽見別人聲音的人。
+<br>理性告訴我一件事，感受又說著另一件事；自己的需要很重要，別人的感受好像也同樣重要。</p>
+<p>這些拉扯曾經讓我成為別人口中「想很多」的人，卻也讓我學會一件很重要的事情：
+<br>什麼是外在的眼光，什麼才是自己的聲音。</p>
 <p>我也慢慢發現，有時候，光是跟一個不批判、也不急著給建議的人說說話，<br>
 就能在過程裡聽見自己：「原來，我是這樣想的。」</p>
 <p>這也是我選擇花精諮詢的原因。<br>
@@ -1150,7 +1150,7 @@ img{max-width:100%}
 <p class="card-limit">一人僅限一次</p>
 <div class="plan-action"><a class="btn" href="https://forms.gle/Ygh66V3NNEiaYqCK8" target="_blank" rel="noopener noreferrer" aria-label="預約初次花精體驗">預約初次體驗</a></div></article></div>
 
-<p class="charity-note">如果你正經歷人生中的幽谷，也可以看看<a href="https://forms.gle/mT8pFyyxkqKpVUa47" target="_blank" rel="noopener noreferrer">公益諮詢計畫</a>。</p>
+<p class="charity-note">如果你正經歷人生中的幽谷，也可以看看<a href="https://care.anissanature.com" target="_blank" rel="noopener noreferrer">公益陪伴計畫</a>。</p>
 </div></section>
 <section class="section" id="faq"><div class="wrap"><div class="faq-layout"><div class="faq-heading"><span class="label">07　／　常見問題</span>
 <h2>你可能也想知道。</h2>
@@ -1431,5 +1431,6 @@ img{max-width:100%}
  });
 })();
 </script>
+
 
 </body></html>
