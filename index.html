@@ -966,22 +966,54 @@ img{max-width:100%}
 #appointment{--closing-photo:image-set(url('assets/optimized/closing.webp') type('image/webp'),url('assets/optimized/closing.jpg') type('image/jpeg'))}
 @media(max-width:767px){.hero{--hero-photo:image-set(url('assets/optimized/hero-mobile.webp') type('image/webp'),url('assets/optimized/hero-mobile.jpg') type('image/jpeg'))}#plans{--plan-photo:image-set(url('assets/optimized/plans-768.webp') type('image/webp'),url('assets/optimized/plans-768.jpg') type('image/jpeg'))}#appointment{--closing-photo:image-set(url('assets/optimized/closing-768.webp') type('image/webp'),url('assets/optimized/closing-768.jpg') type('image/jpeg'))}}
 }
+
+/* Confirmed room Hero: desktop overlay; mobile full-frame photo then copy. */
+#home .hero-mobile-photo{display:none}
+@media(min-width:768px){
+ #home{background-position:center center}
+ #home .hero-copy{position:relative;z-index:1}
+}
+@media(max-width:767px){
+ /* One mobile flow: photo, copy, supporting text. No desktop offsets. */
+ #home{--hero-mobile-gutter:24px;display:flex;flex-direction:column;background:var(--paper);width:100%;max-width:100%;min-height:0;height:auto;padding:0}
+ #home .hero-mobile-photo{display:block;position:static;flex:none;width:100%;max-width:100%;margin:0;transform:none}
+ #home .hero-mobile-photo img{display:block;width:100%;height:auto;aspect-ratio:1279/720;object-fit:contain}
+ #home .hero-layout{box-sizing:border-box;display:block;position:static;flex:none;width:100%;max-width:none;min-width:0;min-height:0;height:auto;margin:0;padding:24px var(--hero-mobile-gutter);transform:none}
+ #home .hero-copy{box-sizing:border-box;position:static;width:100%;max-width:100%;margin:0;min-width:0;transform:none;text-align:left}
+ #home .hero-copy>:is(h1,p,.eyebrow,.hero-actions){position:static;max-width:100%;min-width:0;transform:none!important;overflow-wrap:break-word}
+ #home .hero-copy .hero-actions{display:flex;flex-direction:column;align-items:center;width:100%;height:auto;min-height:0}
+ #home .hero-copy .hero-actions .text-link{box-sizing:border-box;max-width:100%}
+ #home h1{margin:0;line-height:1.38}
+ #home h1>span{display:inline-block;max-width:100%}
+ #home .hero-copy .eyebrow{display:block;margin-bottom:12px}
+ #home .hero-copy .hero-subtitle{margin-top:12px}
+ #home .hero-copy .hero-subtitle+p{margin-top:16px;max-width:none;overflow-wrap:break-word}
+ #home .hero-actions{margin-top:24px;gap:12px}
+ #home .hero-actions .text-link{min-height:48px}
+ #home .hero-note:empty{display:none}
+ #home .hero-script,#home .hero-foot{display:none}
+
+}
 </style></head><body><svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><symbol id="sprig" viewBox="0 0 40 56"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M19 53C20 38 21 23 28 4M23 22C8 24 7 12 8 10c10 0 17 6 15 12ZM21 36C7 38 4 26 5 24c12 0 17 6 16 12ZM25 16C26 4 34 3 37 3c0 9-5 14-12 13ZM21 31C26 19 35 22 36 23c-2 9-9 12-15 8Z"></path></g></symbol></defs></svg><a class="skip" href="#main">跳至主要內容</a>
 <header class="site-header"><div class="wrap header-inner"><a class="brand" href="https://www.facebook.com/anissanature" target="_blank" rel="noopener noreferrer" aria-label="Anissa Nature 采安療心室 Facebook 粉絲專頁"><img class="brand-logo" src="assets/brand-logo-224.png" width="224" height="224" alt=""><span class="brand-wordmark od-field"><span class="brand-name">Anissa · Nature</span><span class="brand-sub">采安療心室</span></span></a><button class="menu" aria-expanded="false" aria-controls="navigation"><span>選單</span><svg class="menu-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h18M3 16h18"></path></svg></button><nav class="nav" id="navigation" aria-label="主要導覽"><a href="#consult">花精諮詢</a><a href="#story">個案故事</a><a href="#anissa">認識采安</a><a href="#flowers">認識花精</a><a href="#plans">方案與費用</a><a href="#faq">常見問題</a><a class="nav-cta" href="https://forms.gle/Ygh66V3NNEiaYqCK8" target="_blank" rel="noopener noreferrer">預約體驗</a></nav></div></header>
-<div class="header-space" aria-hidden="true"></div><main id="main"><section class="hero" id="home"><div class="wrap hero-layout"><div class="hero-copy"><span class="eyebrow">ANISSA · NATURE　／　花精與情緒陪伴</span>
-<h1><span>慢下來，</span><br>
-<span>聽見自己</span></h1>
-<p class="hero-subtitle">讓花精陪你走一段路</p>
-<p>有時候，我們不是不知道該怎麼做，<br>
+<div class="header-space" aria-hidden="true"></div><main id="main"><section class="hero" id="home"><picture class="hero-mobile-photo">
+<source media="(max-width:767px)" type="image/webp" srcset="assets/optimized/hero-mobile.webp">
+<source media="(max-width:767px)" type="image/jpeg" srcset="assets/optimized/hero-mobile.jpg">
+<img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="1279" height="720" alt="陽光灑入的自然療心室，窗邊綠意、木桌與兩張舒適座椅" loading="eager" fetchpriority="high" decoding="async">
+</picture><div class="wrap hero-layout"><div class="hero-copy"><span class="eyebrow" style="font-size: 14px; transform: translate(1px, 21px);">ANISSA · NATURE　／　花精與情緒陪伴</span>
+<h1><span style="font-size: 48px;">慢下來，</span><br>
+<span style="transform: translate(52px, -21px); font-size: 48px;">聽見自己</span></h1>
+<p class="hero-subtitle" style="transform: translate(51px, -22px);">讓花精陪你走一段路</p>
+<p style="transform: translate(51px, -16px); font-size: 18px; line-height: 40px;">有時候，我們不是不知道該怎麼做，<br>
 只是太久沒有好好聽聽自己的聲音。<br>
 在這裡，你可以先不急著找到答案。<br>
 先讓心，有一個可以停靠的地方。</p>
-<div class="hero-actions"><a class="text-link" href="#consult">認識花精諮詢</a></div>
+<div class="hero-actions" style="transform: translate(139px, -5px);"><a class="text-link" href="#consult">認識花精諮詢</a></div>
 <p class="hero-note"></p>
 </div></div>
-<p class="hero-script"><span>A feather way</span><br>
-<span>back to yourself.</span></p>
-<div class="wrap hero-foot"><span>一段談話 · 一份覺察 · 一點新的可能</span></div></section>
+<p class="hero-script"><span style="transform: translate(59px, -94px); font-size: 28px;">A feather way</span><br>
+<span style="font-size: 28px; transform: translate(103px, -140px);">back to yourself.</span></p>
+<div class="wrap hero-foot"><span style="transform: translate(106px, 4px);">一段談話 · 一份覺察 · 一點新的可能</span></div></section>
 <section class="section white" id="consult"><div class="wrap"><div class="two-col consult-intro"><div><span class="label">01　／　關於花精諮詢</span>
 <h2>花精諮詢是什麼？</h2>
 <p class="consult-subtitle">一段陪你重新理解自己內在狀態的過程。</p>
@@ -1431,6 +1463,7 @@ img{max-width:100%}
  });
 })();
 </script>
+
 
 
 </body></html>
